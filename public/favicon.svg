@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="aegis-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Shield Shape -->
+  <path d="M32 4 C20 4 10 10 6 16 V 30 C6 44 18 56 32 60 C46 56 58 44 58 30 V 16 C54 10 44 4 32 4 Z" 
+        fill="#0f172a" 
+        stroke="url(#aegis-grad)" 
+        stroke-width="3" />
+        
+  <!-- Stylized 'A' Circuit -->
+  <path d="M32 18 L20 46 H28 L30 40 H34 L36 46 H44 L32 18 Z" fill="url(#aegis-grad)"/>
+  
+  <!-- Core Node -->
+  <circle cx="32" cy="28" r="3" fill="#ffffff" />
+</svg>
