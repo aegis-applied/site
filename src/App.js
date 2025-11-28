@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Server, Cpu, Lock, Download, ChevronRight, Menu, X, Mail, MapPin, Phone } from 'lucide-react';
+import { Shield, Server, Cpu, Lock, Download, ChevronRight, Menu, X, Mail, MapPin } from 'lucide-react';
 
 // --- Components ---
 
@@ -417,8 +417,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact</h4>
             <ul className="space-y-3 text-slate-400 text-sm">
-              <li className="flex items-center"><Mail className="h-4 w-4 mr-2" /> nathanalam99@gmail.com</li>
-              <li className="flex items-center"><Phone className="h-4 w-4 mr-2" /> 571-451-5103</li>
+              <li className="flex items-center"><Mail className="h-4 w-4 mr-2" /> slam@mba2027.hbs.edu</li>
               <li className="flex items-center"><MapPin className="h-4 w-4 mr-2" /> Fairfax Station, VA 22039</li>
             </ul>
           </div>
