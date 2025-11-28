@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Server, Cpu, Lock, Download, ChevronRight, Terminal, Menu, X, Mail, MapPin, Phone } from 'lucide-react';
+import { Shield, Server, Cpu, Lock, Download, ChevronRight, Menu, X, Mail, MapPin, Phone } from 'lucide-react';
 
 // --- Components ---
 
@@ -425,9 +425,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
             <ul className="space-y-2 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-blue-400">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-400">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-blue-400">CAGE Code (Pending)</a></li>
+              <li><a href="/" className="hover:text-blue-400">Privacy Policy</a></li>
+              <li><a href="/" className="hover:text-blue-400">Terms of Service</a></li>
+              <li><a href="/" className="hover:text-blue-400">CAGE Code (Pending)</a></li>
             </ul>
           </div>
         </div>
