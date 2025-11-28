@@ -1,6 +1,7 @@
 {
   "name": "aegis",
   "version": "0.1.0",
+  "homepage": "https://aegis-applied.github.io/site",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
