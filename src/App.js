@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Server, Cpu, Lock, Download, ChevronRight, Menu, X, Mail, MapPin } from 'lucide-react';
+import { Shield, Server, Cpu, Lock, Download, ChevronRight, Menu, X, Mail, MapPin, Globe, Eye, Zap } from 'lucide-react';
 
 // --- Components ---
 
@@ -185,6 +185,92 @@ const Features = () => {
               <p className="text-slate-400 leading-relaxed">
                 {feature.description}
               </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const DeployedSolutions = () => {
+  const solutions = [
+    {
+      title: "Sentinel",
+      description: "Perimeter security and real-time threat detection for critical infrastructure, utilizing on-premise AI models.",
+      icon: <Shield className="h-6 w-6 text-blue-400" />,
+      tag: "Enterprise"
+    },
+    {
+      title: "Nexus",
+      description: "Low-latency command and control hub for distributed edge operations, ensuring connectivity in contested environments.",
+      icon: <Globe className="h-6 w-6 text-blue-400" />,
+      tag: "Enterprise"
+    },
+    {
+      title: "ORION",
+      description: "Advanced intelligence and surveillance platform utilizing high-density AI inference. Deployed for government customers.",
+      icon: <Eye className="h-6 w-6 text-yellow-400" />,
+      tag: "Government",
+      highlight: true
+    }
+  ];
+
+  return (
+    <div id="solutions" className="py-24 bg-slate-900 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-base text-blue-500 font-semibold tracking-wide uppercase">Capabilities</h2>
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+            Deployed Solutions
+          </p>
+          <p className="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">
+            Mission-proven architectures operating in the field today.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {solutions.map((sol, index) => (
+            <div
+              key={index}
+              className={`relative p-8 rounded-2xl border transition-all hover:shadow-2xl ${
+                sol.highlight
+                  ? 'bg-slate-800/50 border-blue-500/50 shadow-blue-900/20'
+                  : 'bg-slate-900 border-slate-800 hover:border-blue-500/30'
+              }`}
+            >
+              <div className="flex justify-between items-start mb-6">
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center border ${
+                  sol.highlight
+                    ? 'bg-blue-900/30 border-blue-500/40'
+                    : 'bg-slate-800 border-slate-700'
+                }`}>
+                  {sol.icon}
+                </div>
+                <span className={`px-2 py-1 text-xs font-bold uppercase tracking-wider rounded border ${
+                  sol.highlight
+                    ? 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20'
+                    : 'bg-slate-800 text-slate-500 border-slate-700'
+                }`}>
+                  {sol.tag}
+                </span>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-3 flex items-center">
+                {sol.title}
+                {sol.highlight && <Zap className="h-4 w-4 text-yellow-400 ml-2 fill-yellow-400" />}
+              </h3>
+              <p className="text-slate-400 leading-relaxed">
+                {sol.description}
+              </p>
+
+              <div className="mt-6 pt-6 border-t border-slate-700/50 flex items-center text-sm font-medium text-blue-400 cursor-pointer hover:text-blue-300">
+                Learn more <ChevronRight className="ml-1 h-4 w-4" />
+              </div>
             </div>
           ))}
         </div>
@@ -445,6 +531,7 @@ const App = () => {
       <Navigation />
       <Hero />
       <Features />
+      <DeployedSolutions />
       <Specs />
       <WhitePaperViewer />
       <Footer />
